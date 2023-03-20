@@ -56,7 +56,33 @@ def pred_tomato_dieas(tomato_plant):
   elif pred==9:
       return "Tomato - Two Spotted Spider Mite Disease", 'Tomato - Two-spotted_spider_mite.html'
 
+potato_model_path = 'C:/Users/justm/AppData/Local/Programs/Python/Python311/Plant-Leaf-Disease-Prediction-main/model1.h5'
+potato_model = load_model(potato_model_path)
+print(potato_model)
+print("Model Loaded Successfully")
+
+def pred_potato_disease(potato_plant):
+    test_image = load_img(potato_plant, target_size=(128, 128)) # load image 
+    print("@@ Got Image for prediction")
     
+    test_image = img_to_array(test_image)/255 # convert image to np array and normalize
+    test_image = np.expand_dims(test_image, axis=0) # change dimention 3D to 4D
+    
+    result = potato_model.predict(test_image) # predict diseased palnt or not
+    print('@@ Raw result = ', result)
+    
+    pred = np.argmax(result, axis=1)
+    print(pred)
+    if pred==0:
+        return "Potato___Early_blight", 'Potato___Early_blight.html'
+           
+    elif pred==1:
+        return "Potato___healthy", 'Potato___healthy.html'
+          
+    elif pred==2:
+        return "Potato___Late_blight", 'Potato___Late_blight.html'
+         
+ 
 
 # Create flask instance
 app = Flask(__name__)
@@ -68,7 +94,15 @@ def home():
 
 @app.route("/index", methods=['GET', 'POST'])
 def index():
-        return render_template('index.html') 
+        return render_template('index.html')
+
+@app.route("/potato", methods=['GET', 'POST'])
+def potato():
+        return render_template('potato.html') 
+
+
+
+
 
 # get input image from client then predict class and render respective .html page for solution
 @app.route("/predict", methods = ['GET','POST'])
@@ -82,10 +116,32 @@ def predict():
         file.save(file_path)
 
         print("@@ Predicting class......")
+
+        
         pred, output_page = pred_tomato_dieas(tomato_plant=file_path)
+        #   pred, output_page = pred_tomato_dieas(tomato_plant=file_path)
               
         return render_template(output_page, pred_output = pred, user_image = file_path)
-    
+
+
+
+# get input image from client then predict class and render respective .html page for solution
+@app.route("/predict1", methods = ['GET','POST'])
+def predict1():
+     if request.method == 'POST':
+        file = request.files['image'] # fet input
+        filename = file.filename        
+        print("@@ Input posted = ", filename)
+        
+        file_path = os.path.join('C:/Users/justm/AppData/Local/Programs/Python/Python311/Plant-Leaf-Disease-Prediction-main/static/upload/', filename)
+        file.save(file_path)
+
+        print("@@ Predicting class......")
+
+        
+        pred, output_page = pred_potato_disease(potato_plant=file_path)
+              
+        return render_template(output_page, pred_output = pred, user_image = file_path)
 # For local system & cloud
 if __name__ == "__main__":
     app.run(threaded=False,port=8080) 
