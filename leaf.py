@@ -98,7 +98,7 @@ def index():
 
 @app.route("/potato", methods=['GET', 'POST'])
 def potato():
-        return render_template('potato.html') 
+        return render_template('Potato.html') 
 
 
 
