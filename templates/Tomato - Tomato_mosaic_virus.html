@@ -1,94 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
-        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
-
-    <title>TOMATO LEAF DISEASE PREDICTION</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOMATO</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../static/css/nav.css" />
 
     <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-        }
-
-        .border img {
-            border-radius: 15px;
-            border: 2px solid black;
-        }
-		
+      body {
+        background-color: #f5f5f5;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: #333;
+        font-weight: bold;
+      }
+      .bold {
+        font-weight: bold;
+      }
+      .custom-list li {
+        margin-bottom: 10px;
+      }
+      .custom-paragraph {
+        font-size: 18px;
+        line-height: 1.5;
+        color: #555;
+        text-align: justify;
+      }
+      .bg-custom {
+        background-color: #123456;
+      }
     </style>
-</head>
-
-<body background="{{url_for('static',filename = 'images/Back.jpg')}}">
-
-
-
-    <div>
-        <h1 style="text-align:center;font-size:4rem">Predict Tomato Leaf Disease & Get Cure</h1>
-    </div>
-
-   <br>
-   <br>
-
-
-    <div class="container my-2">
-        <div class="row mb-5">
-
-            <div class="col-sm" style="margin-bottom: 23px;">
-                <span class="border border-primary">
-                    <img src="{{url_for('static',filename = 'images/Tomato___Tomato_mosaic_virus.JPG' )}}" alt="User Image" style="width:500px;height:500px;">
-                    
-
-                </span>
-            </div>
-
-            <div class="col-sm">
-
-                <div>
-                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
-                        class="text-center mb-5 content-h1 rounded">
-                        {{pred_output}} </h1>
-                </div>
-                <div class="details">
-					
-					<h4><b> Treatment : </b> </h4>
-                    <h6>
-
-					There are no cures for viral diseases such as mosaic once a plant is infected. As a result, every effort should be made to prevent the disease from entering your garden.
-					<br>
-1.Fungicides will NOT treat this viral disease.
-<br>
-2.Plant resistant varieties when available or purchase transplants from a reputable source.
-<br>
-3.Do NOT save seed from infected crops.
-<br>
-4.Spot treat with least-toxic, natural pest control products, such as Safer Soap, Bon-Neem and diatomaceous earth, to reduce the number of disease carrying insects.
-<br>
-5.Harvest-Guard® row cover will help keep insect pests off vulnerable crops/ transplants and should be installed until bloom.
-<br>
-6.Remove all perennial weeds, using least-toxic herbicides, within 100 yards of your garden plot.
-<br>
-7.The virus can be spread through human activity, tools and equipment. Frequently wash your hands and disinfect garden tools, stakes, ties, pots, greenhouse benches, etc. (one part bleach to 4 parts water) to reduce the risk of contamination.
-<br>
-8.Avoid working in the garden during damp conditions (viruses are easily spread when plants are wet).
-<br>
-9.Avoid using tobacco around susceptible plants. Cigarettes and other tobacco products may be infected and can spread the virus.
-<br>
-10.Remove and destroy all infected plants (see Fall Garden Cleanup). Do NOT compost.
-<br>
-                    </h6>
-                </div>
-            </div>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://user-images.githubusercontent.com/30645315/68544440-37ffdd80-03e9-11ea-8acd-3f3f9b6fc8b3.png"
+            alt=""
+            width="30"
+            height="30"
+            class="d-inline-block align-text-top me-2"
+          />
+          TOMATO PLANT LEAF DISEASE PREDICTION
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="">This Page For Tomato</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Home</a>
+            </li>
+            <!-- 
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li> -->
+          </ul>
         </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 p-2">
+          <h1 class="text-center mb-5">
+            TOMATO PLANT LEAF DISEASE PREDICTION & CURE
+          </h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 p-1">
+          <span class="border border-primary">
+            <img
+              src="{{url_for('static',filename = 'images/Tomato___Bacterial_spot.JPG' )}}"
+              alt=""
+              class="img-fluid"
+              width="300"
+              height="300"
+            />
+          </span>
+        </div>
+        <div class="col-md-8 p-1">
+          <h1
+            style="
+              padding: 15px;
+              background-color: rgb(15, 15, 15);
+              color: white;
+            "
+            class="text-center mb-5 content-h1 rounded"
+          >
+            {{pred_output}}
+          </h1>
+          <h2>Disease</h2>
+          <p class="custom-paragraph">
+            Tomato mosaic virus disease is a viral disease that affects tomatoes
+            and is caused by the tomato mosaic virus (ToMV). It is a highly
+            contagious disease that can spread rapidly throughout tomato crops,
+            leading to significant yield losses.
+          </p>
+          <h6>Some Prevention Strategies:</h6>
+          <ul class="custom-list">
+            <li>Use disease-resistant tomato cultivars</li>
+            <li>Practice good hygiene</li>
+            <li>Avoid planting in contaminated soil</li>
+            <li>Control insect vectors</li>
+            <li>Use crop rotation</li>
+            <li>Remove infected plants</li>
+            <li>Avoid smoking near tomato plants</li>
+          </ul>
+          <p class="bold">
+            It is important to remember that prevention is key when it comes to
+            tomato mosaic virus disease, as there is no cure once a plant is
+            infected.
+          </p>
+          <div class="row">
+            <div class="col-md-12 p-2">
+              <h2>Treatment:</h2>
+              <ul class="custom-paragraph">
+                <li>
+                  Remove and destroy infected plants: As soon as you notice any
+                  symptoms of the disease, remove and destroy the infected
+                  plants to prevent the virus from spreading to healthy plants.
+                </li>
+                <li>
+                  Use good sanitation practices: Keep the growing area clean and
+                  free of plant debris that could harbor the virus.
+                </li>
+                <li>
+                  Control insect vectors: Control insects that can spread the
+                  virus, such as aphids and whiteflies, by using insecticides or
+                  physical barriers.
+                </li>
+                <li>
+                  Use resistant cultivars: Planting resistant tomato cultivars
+                  can prevent or reduce the incidence of the disease.
+                </li>
+                <li>
+                  Rotate crops: Crop rotation with non-host plants can help to
+                  reduce the buildup of the virus in the soil.
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-12 p-2">
+              <h2>Pestisides:</h2>
 
-
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card">
+                    <img
+                      src="{{url_for('static',filename = 'Disease/Bacteria_Spot_Cure.webp' )}}"
+                      alt=""
+                      class="card-img-top"
+                      width="200"
+                      height="250"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Liquid Copper Fungicide</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card">
+                    <img
+                      src="{{url_for('static',filename = 'Disease/Bacteria_Spot_Cure1.jpg' )}}"
+                      alt=""
+                      class="card-img-top"
+                      width="200"
+                      height="250"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Fungicide, Miticide, Insecticide
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
 
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

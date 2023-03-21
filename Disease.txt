@@ -1,0 +1,44 @@
+Tomato
+
+Tomato - Bacteria Spot Disease
+Tomato - Early Blight Disease
+Tomato - Healthy and Fresh
+Tomato - Late Blight Disease
+Tomato - Leaf Mold Disease
+Tomato - Septoria Leaf Spot Disease
+Tomato - Target Spot Disease
+Tomato - Tomoato Yellow Leaf Curl Virus Disease
+Tomato - Tomato Mosaic Virus Disease
+Tomato - Two Spotted Spider Mite Disease
+
+
+Potato
+
+Potato___Early_blight
+Potato___healthy
+Potato___Late_blight
+
+Cotton
+
+bacterial_blight
+curl_virus
+fussarium_wilt
+healthy
+
+Leaf mold is a fungal disease that affects tomatoes, particularly in humid and warm conditions. Here are some strategies to prevent and manage tomato leaf mold disease:
+
+    Plant disease-resistant tomato varieties: Choose tomato varieties that are resistant to leaf mold disease.
+
+    Proper plant spacing: Make sure to provide adequate spacing between plants to ensure proper airflow and reduce humidity levels around the plants.
+
+    Water management: Avoid overhead watering, which can increase humidity levels. Instead, use drip irrigation or water at the base of the plants. Water early in the morning so that leaves can dry quickly.
+
+    Proper pruning: Prune the lower branches of the tomato plant to increase airflow and reduce humidity levels.
+
+    Cleanliness: Keep the garden area and equipment clean to reduce the chances of the fungus spreading.
+
+    Fungicide application: Apply fungicides as a preventive measure early in the season, particularly if you have had leaf mold disease in the past. Copper-based fungicides or sulfur-based fungicides are effective against leaf mold.
+
+    Crop rotation: Rotate tomato crops with other vegetables to prevent the buildup of fungal spores in the soil.
+
+By following these strategies, you can reduce the chances of leaf mold disease affecting your tomato plants and promote healthy tomato growth.

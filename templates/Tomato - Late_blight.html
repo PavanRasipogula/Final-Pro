@@ -1,77 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
-        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
-
-    <title>TOMATO LEAF DISEASE PREDICTION</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOMATO</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../static/css/nav.css" />
 
     <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-        }
-
-        .border img {
-            border-radius: 15px;
-            border: 2px solid black;
-        }
-		
+      body {
+        background-color: #f5f5f5;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: #333;
+        font-weight: bold;
+      }
+      .bold {
+        font-weight: bold;
+      }
+      .custom-list li {
+        margin-bottom: 10px;
+      }
+      .custom-paragraph {
+        font-size: 18px;
+        line-height: 1.5;
+        color: #555;
+        text-align: justify;
+      }
+      .bg-custom {
+        background-color: #123456;
+      }
     </style>
-</head>
-
-<body background="{{url_for('static',filename = 'images/Back.jpg')}}">
-
-
-
-    <div>
-        <h1 style="text-align:center;font-size:4rem">Predict Tomato Leaf Disease & Get Cure</h1>
-    </div>
-
-   <br>
-   <br>
-
-
-    <div class="container my-2">
-        <div class="row mb-5">
-
-            <div class="col-sm" style="margin-bottom: 23px;">
-                <span class="border border-primary">
-                    <img src="{{url_for('static',filename = 'images/Tomato___Late_blight.JPG' )}}" alt="User Image" style="width:500px;height:500px;">
-                    
-
-                </span>
-            </div>
-
-            <div class="col-sm">
-
-                <div>
-                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
-                        class="text-center mb-5 content-h1 rounded">
-                        {{pred_output}} </h1>
-                </div>
-                <div class="details">
-					
-					<h4><b> Treatment : </b> </h4>
-                    <h6>
-
-
-                        
-                        Tomatoes that have early blight require immediate attention before the disease takes over the plants. Thoroughly spray the plant (bottoms of leaves also) with Bonide Liquid Copper Fungicide concentrate or Bonide Tomato & Vegetable. Both of these treatments are organic..</br></br>
-                        
-
-                    </h6>
-                </div>
-            </div>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://user-images.githubusercontent.com/30645315/68544440-37ffdd80-03e9-11ea-8acd-3f3f9b6fc8b3.png"
+            alt=""
+            width="30"
+            height="30"
+            class="d-inline-block align-text-top me-2"
+          />
+          TOMATO PLANT LEAF DISEASE PREDICTION
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="">This Page For Tomato</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Home</a>
+            </li>
+            <!-- 
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li> -->
+          </ul>
         </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 p-2">
+          <h1 class="text-center mb-5">
+            TOMATO PLANT LEAF DISEASE PREDICTION & CURE
+          </h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 p-1">
+          <span class="border border-primary">
+            <img
+              src="{{url_for('static',filename = 'images/Tomato___Late_blight.JPG' )}}"
+              alt=""
+              class="img-fluid"
+              width="300"
+              height="300"
+            />
+          </span>
+        </div>
+        <div class="col-md-8 p-1">
+          <h1
+            style="
+              padding: 15px;
+              background-color: rgb(15, 15, 15);
+              color: white;
+            "
+            class="text-center mb-5 content-h1 rounded"
+          >
+            {{pred_output}}
+          </h1>
+          <h2>Disease:</h2>
+          <p class="custom-paragraph">
+            Late blight is a devastating disease that can affect tomatoes and
+            other plants in the Solanaceae family, caused by the pathogen
+            Phytophthora infestans. Once infected, the plant can rapidly develop
+            dark, water-soaked lesions on leaves and stems, leading to plant
+            death.
+          </p>
+          <h6>Some Prevention Strategies:</h6>
+          <ul class="custom-list">
+            <li>Plant resistant varieties</li>
+            <li>Practice good sanitation</li>
+            <li>Proper watering</li>
+            <li>Fungicides</li>
+            <li>Monitor your plants</li>
+          </ul>
+          <p class="bold">
+            Remember, prevention is the best strategy when it comes to late
+            blight disease.
+          </p>
+          <div class="row">
+            <div class="col-md-12 p-2">
+              <h2>Treatment:</h2>
+              <ul class="custom-paragraph">
+                <li>
+                  Remove infected plants: As soon as you notice the symptoms of
+                  late blight disease in your tomato plants, remove and destroy
+                  them immediately. Do not compost them as this can spread the
+                  disease.
+                </li>
+                <li>
+                  Improve air circulation: Late blight disease thrives in humid
+                  environments, so make sure your tomato plants have adequate
+                  spacing between them to promote air circulation. Prune the
+                  plants to remove any overcrowded or diseased branches.
+                </li>
+                <li>
+                  Water management: Avoid watering your tomato plants in the
+                  evening as this can create a humid environment that promotes
+                  the growth of late blight disease. Instead, water them early
+                  in the morning or during the day.
+                </li>
+                <li>
+                  Fungicides: Use a fungicide that contains copper or
+                  chlorothalonil to prevent the spread of late blight disease in
+                  your tomato plants. Follow the instructions on the product
+                  label carefully.
+                </li>
+                <li>
+                  Biological control: Use biological control methods such as
+                  introducing predatory insects like ladybugs or lacewings to
+                  your garden. These insects feed on the eggs and larvae of
+                  pests that can spread late blight disease.
+                </li>
+              </ul>
+            </div>
 
+            <div class="col-md-12 p-2">
+              <h2>Pestisides:</h2>
 
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card">
+                    <img
+                      src="{{url_for('static',filename = 'Disease/Late_Blight_Cure.webp' )}}"
+                      alt=""
+                      class="card-img-top"
+                      width="200"
+                      height="250"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Mancozeb 75% Contact Fungicide 1kg
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card">
+                    <img
+                      src="{{url_for('static',filename = 'Disease/Late_Blight_Cure1.webp' )}}"
+                      alt=""
+                      class="card-img-top"
+                      width="200"
+                      height="250"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">JU Metalaxyl Fungicide, Packet</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
 
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

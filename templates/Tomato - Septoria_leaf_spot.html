@@ -1,80 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
-        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
-
-    <title>TOMATO LEAF DISEASE PREDICTION</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOMATO</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../static/css/nav.css" />
 
     <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-        }
-
-        .border img {
-            border-radius: 15px;
-            border: 2px solid black;
-        }
-		
+      body {
+        background-color: #f5f5f5;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: #333;
+        font-weight: bold;
+      }
+      .bold {
+        font-weight: bold;
+      }
+      .custom-list li {
+        margin-bottom: 10px;
+      }
+      .custom-paragraph {
+        font-size: 18px;
+        line-height: 1.5;
+        color: #555;
+        text-align: justify;
+      }
+      .bg-custom {
+        background-color: #123456;
+      }
     </style>
-</head>
-
-<body background="{{url_for('static',filename = 'images/Back.jpg')}}">
-
-
-
-    <div>
-        <h1 style="text-align:center;font-size:4rem">Predict Tomato Leaf Disease & Get Cure</h1>
-    </div>
-
-   <br>
-   <br>
-
-
-    <div class="container my-2">
-        <div class="row mb-5">
-
-            <div class="col-sm" style="margin-bottom: 23px;">
-                <span class="border border-primary">
-                    <img src="{{url_for('static',filename = 'images/Tomato___Septoria_leaf_spot.JPG' )}}" alt="User Image" style="width:500px;height:500px;">
-                    
-
-                </span>
-            </div>
-
-            <div class="col-sm">
-
-                <div>
-                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
-                        class="text-center mb-5 content-h1 rounded">
-                        {{pred_output}} </h1>
-                </div>
-                <div class="details">
-					
-					<h4><b> Treatment : </b> </h4>
-                    <h6>
-					<b>Removing infected leaves: </b> Remove infected leaves immediately, and be sure to wash your hands and pruners thoroughly before working with uninfected plants.
-					<br>
-<b>Consider organic fungicide options:</b> Fungicides containing either copper or potassium bicarbonate will help prevent the spreading of the disease. Begin spraying as soon as the first symptoms appear and follow the label directions for continued management.
-<br>
-<b>Consider chemical fungicides:</b> While chemical options are not ideal, they may be the only option for controlling advanced infections. One of the least toxic and most effective is chlorothalonil (sold under the names Fungonil and Daconil).
-					
-					<br>
-					<br>
-
-                    </h6>
-                </div>
-            </div>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://user-images.githubusercontent.com/30645315/68544440-37ffdd80-03e9-11ea-8acd-3f3f9b6fc8b3.png"
+            alt=""
+            width="30"
+            height="30"
+            class="d-inline-block align-text-top me-2"
+          />
+          TOMATO PLANT LEAF DISEASE PREDICTION
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="">This Page For Tomato</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Home</a>
+            </li>
+            <!-- 
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li> -->
+          </ul>
         </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 p-2">
+          <h1 class="text-center mb-5">
+            TOMATO PLANT LEAF DISEASE PREDICTION & CURE
+          </h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 p-1">
+          <span class="border border-primary">
+            <img
+              src="{{url_for('static',filename = 'images/Tomato___Bacterial_spot.JPG' )}}"
+              alt=""
+              class="img-fluid"
+              width="300"
+              height="300"
+            />
+          </span>
+        </div>
+        <div class="col-md-8 p-1">
+          <h1
+            style="
+              padding: 15px;
+              background-color: rgb(15, 15, 15);
+              color: white;
+            "
+            class="text-center mb-5 content-h1 rounded"
+          >
+            {{pred_output}}
+          </h1>
+          <h2>Disease</h2>
+          <p class="custom-paragraph">
+            Tomato Septoria leaf spot disease is a common fungal disease that
+            affects tomato plants. It is caused by the fungus Septoria
+            lycopersici and can lead to significant losses in tomato yields if
+            not managed properly.Tomato Septoria leaf spot disease typically
+            begin with small, dark spots that appear on the lower leaves of the
+            plant. These spots eventually become larger and form a distinctive
+            bullseye pattern, with a dark center surrounded by a yellow halo.
+          </p>
+          <h6>Some Prevention Strategies:</h6>
+          <ul class="custom-list">
+            <li>Plant resistant varieties</li>
+            <li>Crop rotation</li>
+            <li>Good sanitation</li>
+            <li>Avoid overhead irrigation</li>
+            <li>Fungicides</li>
+            <li>Early detection</li>
+          </ul>
+          <p class="bold">
+            Remember, prevention is the best strategy when it comes to late
+            blight disease.
+          </p>
+          <div class="row">
+            <div class="col-md-12 p-2">
+              <h2>Treatment:</h2>
+              <ul class="custom-paragraph">
+                <li>
+                  Remove infected leaves: As soon as you see signs of Septoria
+                  leaf spot disease, remove the infected leaves from the plant
+                  and dispose of them in the trash. Do not compost the infected
+                  leaves, as this can spread the disease.
+                </li>
+                <li>
+                  Fungicides: Fungicides can help manage Septoria leaf spot
+                  disease in tomatoes, but they must be used preventively before
+                  the disease develops or early in the infection stage. Consult
+                  with a local agricultural extension agent or a nursery
+                  professional for advice on selecting and using fungicides
+                  safely and effectively.
+                </li>
+                <li>
+                  Improve air circulation: Good air circulation can help reduce
+                  the severity of Septoria leaf spot disease. Prune tomato
+                  plants to improve air flow, and avoid planting tomatoes too
+                  closely together.
+                </li>
+                <li>
+                  Mulching: Mulching around the base of tomato plants with
+                  organic material such as straw, leaves, or grass clippings can
+                  help prevent soil-borne spores from splashing up onto the
+                  leaves.
+                </li>
+                <li>
+                  Watering: Water tomato plants at the base to avoid wetting the
+                  leaves, which can promote the growth of fungal spores.
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-12 p-2">
+              <h2>Pestisides:</h2>
 
-
+              <div class="row">
+                <div class="col-md-6">
+                  <!-- <div class="card">
+                    <img
+                      src="{{url_for('static',filename = 'Disease/Early_Blight_Cure.webp' )}}"
+                      alt=""
+                      class="card-img-top"
+                      width="200"
+                      height="250"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">KAVACH FUNGICIDE</h5>
+                    </div> -->
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card">
+                    <img
+                      src="{{url_for('static',filename = 'Disease/Bacteria_Spot_Cure1.jpg' )}}"
+                      alt=""
+                      class="card-img-top"
+                      width="200"
+                      height="250"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Fungicide, Miticide, Insecticide
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
 
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
