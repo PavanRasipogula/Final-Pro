@@ -92,15 +92,17 @@ app = Flask(__name__)
 def home():
         return render_template('Homepage.html') 
 
-@app.route("/index", methods=['GET', 'POST'])
-def index():
+@app.route("/tomato", methods=['GET', 'POST'])
+def tomato():
         return render_template('Tomato.html')
 
 @app.route("/potato", methods=['GET', 'POST'])
 def potato():
         return render_template('Potato.html') 
 
-
+@app.route("/cotton", methods=['GET', 'POST'])
+def cotton():
+        return render_template('Cotton.html') 
 
 
 
