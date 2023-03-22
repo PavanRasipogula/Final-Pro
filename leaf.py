@@ -73,12 +73,14 @@ def pred_potato_disease(potato_plant):
     print(pred)
     if pred==0:
         return "Potato___Early_blight", 'Potato___Early_blight.html'
-           
+
     elif pred==1:
+        return "Potato___Late_blight", 'Potato___Late_blight.html'       
+    elif pred==2:
         return "Potato___healthy", 'Potato___healthy.html'
           
-    elif pred==2:
-        return "Potato___Late_blight", 'Potato___Late_blight.html'
+    # elif pred==2:
+    #     return "Potato___Late_blight", 'Potato___Late_blight.html'
          
  
 

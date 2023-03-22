@@ -1,241 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Potato</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
-      integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX"
-      crossorigin="anonymous"
-    />
-</head>
-<body>
-    <div class="container my-5">
-        <div class="row">
-          <div class="col-lg-6">
-            <img class="w-100 shadow" src="{{url_for('static',filename = 'images/b817817e-a6b1-4123-88e7-db98b453ce17___RS_Early.B 6880.JPG' )}}"
-            alt="User Image"
-            style="width: 500px; height: 500px" />
-          </div>
-          <div class="col-lg-6">
-            <div class="p-5 mt-4">
-                <div class="col-sm">
-                    <div>
-                      <h1
-                        style="
-                          padding: 15px;
-                          background-color: rgb(15, 15, 15);
-                          color: white;
-                        "
-                        class="text-center mb-5 content-h1 rounded"
-                      >
-                        {{pred_output}}
-                      </h1>
-                    </div>
-                <h1 class="display-6"><b>Treatment :</b></h1>
-                <p class="lead">Early blight overwinters on infected plant tissue and is spread by
-                    splashing rain, irrigation, insects and garden tools. The disease
-                    is also carried on tomato seeds and in potato tubers. In spite of
-                    its name, early blight can occur any time throughout the growing
-                    season. High temperatures (80-85˚F.) and wet, humid conditions
-                    promote its rapid spread. In many cases, poorly nourished or
-                    stressed plants are attacked.</p>
-                <!-- <a href="#" class="btn btn-outline-dark">Read More</a> -->
-                <p>
-                    -Prune or stake plants to improve air circulation and reduce
-                    fungal problems.
-                  </p>
-                  <p>
-                    -Make sure to disinfect your pruning shears (one part bleach to 4
-                    parts water) after each cut.
-                  </p>
-                  <p>
-                    -Keep the soil under plants clean and free of garden debris. Add a
-                    layer of organic compost to prevent the spores from splashing back
-                    up onto vegetation.
-                  </p>
-                  <p>
-                    -Drip irrigation and soaker hoses can be used to help keep the
-                    foliage dry.
-                  </p>
-                  <p>
-                    -For best control, apply copper-based fungicides early, two weeks
-                    before disease normally appears or when weather forecasts predict
-                    a long period of wet weather. Alternatively, begin treatment when
-                    disease first appears, and repeat every 7-10 days for as long as
-                    needed.
-                  </p>
-                  <p>
-                    -Containing copper and pyrethrins, Bonide® Garden Dust is a safe,
-                    one-step control for many insect attacks and fungal problems. For
-                    best results, cover both the tops and undersides of leaves with a
-                    thin uniform film or dust. Depending on foliage density, 10 oz
-                    will cover 625 sq ft. Repeat applications every 7-10 days, as
-                    needed.
-                  </p>
-                  <p>
-                    -SERENADE Garden is a broad spectrum, preventative bio-fungicide
-                    recommended for the control or suppression of many important plant
-                    diseases. For best results, treat prior to foliar disease
-                    development or at the first sign of infection. Repeat at 7-day
-                    intervals or as needed.
-                  </p>
-                  <p>
-                    -Remove and destroy all garden debris after harvest and practice
-                    crop rotation the following year.
-                  </p>
-                  <p>-Burn or bag infected plant parts. Do NOT compost.</p>
-                
-              </div>
-          </div>
-      </div>
-      <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-      crossorigin="anonymous"
-    ></script>
-</body>
-</html>
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+    <title>POTATO</title>
+    <!-- Bootstrap 5 CSS -->
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
-      integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX"
-      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
     />
-
-    <title>POTATO LEAF DISEASE PREDICTION</title>
+    <link rel="stylesheet" href="../static/css/nav.css" />
 
     <style>
-      * {
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
+      body {
+        background-color: #f5f5f5;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: #333;
+        font-weight: bold;
       }
 
-      .border img {
-        border-radius: 15px;
-        border: 2px solid black;
+      .bold {
+        font-weight: bold;
+      }
+      .custom-list li {
+        margin-bottom: 10px;
+      }
+      .custom-paragraph {
+        font-size: 18px;
+        line-height: 1.5;
+        color: #555;
+        text-align: justify;
+      }
+      .bg-custom {
+        background-color: #123456;
       }
     </style>
   </head>
-
-  <body background="{{url_for('static',filename = 'images/Back.jpg')}}">
-    <div>
-      <h1 style="text-align: center; font-size: 4rem">
-        Predict POTATO Leaf Disease & Get Cure
-      </h1>
-    </div>
-
-    <br />
-    <br />
-
-    <div class="container my-2">
-      <div class="row mb-5">
-        <div class="col-sm" style="margin-bottom: 23px">
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://user-images.githubusercontent.com/30645315/68544440-37ffdd80-03e9-11ea-8acd-3f3f9b6fc8b3.png"
+            alt=""
+            width="30"
+            height="30"
+            class="d-inline-block align-text-top me-2"
+          />
+          POTATO PLANT LEAF DISEASE PREDICTION
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="">This Page For Potato</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Home</a>
+            </li>
+            <!-- 
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 p-2">
+          <h1 class="text-center mb-5">
+            POTATO PLANT LEAF DISEASE PREDICTION & CURE
+          </h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 p-1">
           <span class="border border-primary">
             <img
               src="{{url_for('static',filename = 'images/b817817e-a6b1-4123-88e7-db98b453ce17___RS_Early.B 6880.JPG' )}}"
-              alt="User Image"
-              style="width: 500px; height: 500px"
+              alt=""
+              class="img-fluid"
+              width="300"
+              height="300"
             />
           </span>
         </div>
+        <div class="col-md-8 p-1">
+          <h1
+            style="
+              padding: 15px;
+              background-color: rgb(15, 15, 15);
+              color: white;
+            "
+            class="text-center mb-5 content-h1 rounded"
+          >
+            {{pred_output}}
+          </h1>
+          <h2>Disease</h2>
+          <p class="custom-paragraph">
+            Potato early blight is a common fungal disease that affects potato
+            plants. It is caused by the fungus Alternaria solani and can cause
+            significant damage to the leaves, stems, and tubers of potato
+            plants.The symptoms of potato early blight typically start as small,
+            circular lesions on the lower leaves of the plant. These lesions are
+            dark brown to black in color and have a target-like appearance with
+            a lighter-colored center. As the disease progresses, the lesions can
+            enlarge and merge together, causing the leaves to turn yellow and
+            eventually die. In severe cases, the disease can spread to the stems
+            and tubers of the plant, causing rot and reducing yield.
+          </p>
+          <h6>Some Prevention Strategies:</h6>
+          <ul class="custom-list">
+            <li>Crop Rotation</li>
+            <li>Sanitation</li>
+            <li>Irrigation Management</li>
+            <li>Plant Resistant Varieties</li>
+            <li>Fungicides</li>
+            <li>Nutritional Management</li>
+            <li>Pruning and Weeding</li>
+          </ul>
+          <p class="bold">
+            By combining some or all of these strategies, farmers and gardeners
+            can effectively prevent or manage early blight in their potato
+            crops.
+          </p>
+          <div class="row">
+            <div class="col-md-12 p-2">
+              <h2>Treatment:</h2>
+              <ul class="custom-paragraph">
+                <li>
+                  Fungicides: Fungicides can be applied to potato plants to
+                  control early blight, but they are most effective when applied
+                  preventatively, before symptoms appear. Consult with a local
+                  agricultural extension office for advice on appropriate
+                  fungicides, application rates, and timing.
+                </li>
+                <li>
+                  Pruning: Remove any infected leaves, stems, or tubers as soon
+                  as they are detected. This can help prevent the disease from
+                  spreading to other parts of the plant and reduce the overall
+                  severity of the infection.
+                </li>
+                <li>
+                  Sanitation: Remove and destroy any diseased plant material at
+                  the end of the growing season to reduce the risk of infection
+                  in the next year's crop.
+                </li>
+                <li>
+                  Irrigation Management: Watering the potato plants in the
+                  morning instead of the evening helps to reduce the humidity
+                  around the leaves, which makes it less conducive for the
+                  fungus to grow and spread.
+                </li>
+                <li>
+                  Nutritional Management: Proper fertilization and nutritional
+                  management can help to improve plant health and reduce the
+                  risk of early blight infections.
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-12 p-2">
+              <h2>Pestisides:</h2>
 
-        <div class="col-sm">
-          <div>
-            <h1
-              style="
-                padding: 15px;
-                background-color: rgb(15, 15, 15);
-                color: white;
-              "
-              class="text-center mb-5 content-h1 rounded"
-            >
-              {{pred_output}}
-            </h1>
-          </div>
-          <div class="details">
-            <h4><b> Treatment : </b></h4>
-
-            <h3>
-              Early blight overwinters on infected plant tissue and is spread by
-              splashing rain, irrigation, insects and garden tools. The disease
-              is also carried on tomato seeds and in potato tubers. In spite of
-              its name, early blight can occur any time throughout the growing
-              season. High temperatures (80-85˚F.) and wet, humid conditions
-              promote its rapid spread. In many cases, poorly nourished or
-              stressed plants are attacked.
-            </h3>
-            <h5>Treatment</h5>
-
-            <p>
-              -Prune or stake plants to improve air circulation and reduce
-              fungal problems.
-            </p>
-            <p>
-              -Make sure to disinfect your pruning shears (one part bleach to 4
-              parts water) after each cut.
-            </p>
-            <p>
-              -Keep the soil under plants clean and free of garden debris. Add a
-              layer of organic compost to prevent the spores from splashing back
-              up onto vegetation.
-            </p>
-            <p>
-              -Drip irrigation and soaker hoses can be used to help keep the
-              foliage dry.
-            </p>
-            <p>
-              -For best control, apply copper-based fungicides early, two weeks
-              before disease normally appears or when weather forecasts predict
-              a long period of wet weather. Alternatively, begin treatment when
-              disease first appears, and repeat every 7-10 days for as long as
-              needed.
-            </p>
-            <p>
-              -Containing copper and pyrethrins, Bonide® Garden Dust is a safe,
-              one-step control for many insect attacks and fungal problems. For
-              best results, cover both the tops and undersides of leaves with a
-              thin uniform film or dust. Depending on foliage density, 10 oz
-              will cover 625 sq ft. Repeat applications every 7-10 days, as
-              needed.
-            </p>
-            <p>
-              -SERENADE Garden is a broad spectrum, preventative bio-fungicide
-              recommended for the control or suppression of many important plant
-              diseases. For best results, treat prior to foliar disease
-              development or at the first sign of infection. Repeat at 7-day
-              intervals or as needed.
-            </p>
-            <p>
-              -Remove and destroy all garden debris after harvest and practice
-              crop rotation the following year.
-            </p>
-            <p>-Burn or bag infected plant parts. Do NOT compost.</p>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card">
+                    <img
+                      src="{{url_for('static',filename = 'Disease/Early_Blight_Cure_Potato.png' )}}"
+                      alt=""
+                      class="card-img-top"
+                      width="200"
+                      height="250"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Tyzeb 80 WP</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card">
+                    <img
+                      src="{{url_for('static',filename = 'Disease/Early_Blight_Cure_Potato1.webp' )}}"
+                      alt=""
+                      class="card-img-top"
+                      width="200"
+                      height="250"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">AMISTAR FUNGICIDE</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
-</html> -->
+</html>
