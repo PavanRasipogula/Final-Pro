@@ -20,8 +20,8 @@ Potato___Late_blight
 
 Cotton
 
-bacterial_blight
-curl_virus
-fussarium_wilt
-healthy
+Cotton_bacterial_blight
+Cotton_curl_virus
+Cotton_fussarium_wilt
+Cotton_healthy
 
