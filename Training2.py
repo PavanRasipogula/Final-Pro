@@ -36,8 +36,8 @@ classifier.add(MaxPooling2D(pool_size=(2, 2)))
 classifier.add(Flatten())
 
 # Step 4 - Full connection
-classifier.add(Dense(units=6, activation='relu'))
-classifier.add(Dense(units=4, activation='sigmoid'))
+classifier.add(Dense(units=32, activation='relu'))
+classifier.add(Dense(units=6, activation='sigmoid'))
 
 # Compiling the CNN
 classifier.compile(
@@ -49,10 +49,10 @@ train_datagen = ImageDataGenerator(
 
 test_datagen = ImageDataGenerator(rescale=1./255)
 
-training_set = train_datagen.flow_from_directory('C:/Users/justm/AppData/Local/Programs/Python/Python311/Plant-Leaf-Disease-Prediction-main/Dataset2/Train',  # relative path from working directoy
+training_set = train_datagen.flow_from_directory('C:/Users/justm/AppData/Local/Programs/Python/Python311/Plant-Leaf-Disease-Prediction-main/Dataset3/train',  # relative path from working directoy
                                                  target_size=(128, 128),
                                                  batch_size=32, class_mode='categorical')
-valid_set = test_datagen.flow_from_directory('C:/Users/justm/AppData/Local/Programs/Python/Python311/Plant-Leaf-Disease-Prediction-main/Dataset2/Val',  # relative path from working directoy
+valid_set = test_datagen.flow_from_directory('C:/Users/justm/AppData/Local/Programs/Python/Python311/Plant-Leaf-Disease-Prediction-main/Dataset3/val',  # relative path from working directoy
                                              target_size=(128, 128),
                                              batch_size=32, class_mode='categorical')
 
@@ -62,7 +62,7 @@ print(labels)
 
 classifier.fit_generator(training_set,
                          steps_per_epoch=20,
-                         epochs=50,
+                         epochs=200,
                          validation_data=valid_set
 
                          )

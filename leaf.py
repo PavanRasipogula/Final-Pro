@@ -86,7 +86,7 @@ def pred_potato_disease(potato_plant):
         return "Potato___healthy", 'Potato___healthy.html'
 
 
-cotton_model_path = 'C:/Users/justm/AppData/Local/Programs/Python/Python311/Plant-Leaf-Disease-Prediction-main/model1.h5'
+cotton_model_path = 'C:/Users/justm/AppData/Local/Programs/Python/Python311/Plant-Leaf-Disease-Prediction-main/model2.h5'
 cotton_model = load_model(cotton_model_path)
 print(cotton_model)
 print("Model Loaded Successfully")
@@ -107,13 +107,17 @@ def pred_cotton_disease(cotton_plant):
     pred = np.argmax(result, axis=1)
     print(pred)
     if pred == 0:
-        return "Cotton - Bacterial_blight", 'Cotton - Bacterial_blight.html'
+        return "Cotton - Aphids", 'Cotton - Bacterial_blight.html'
     elif pred == 1:
-        return "Cotton - Leaf_Curl_Virus", 'Cotton - Leaf_Curl_Virus.html'
+        return "Cotton - Army worm", 'Cotton - Leaf_Curl_Virus.html'
     elif pred == 2:
-        return "Cotton - Fussarium_wilt", 'Cotton - Fussarium_wilt.html'
+        return "Cotton - Bacterial_blight", 'Cotton - Bacterial_blight.html'
     elif pred == 3:
         return "Cotton - Healthy", 'Cotton - Healthy.html'
+    elif pred == 4:
+        return "Cotton - Powdery Mildew", 'Cotton - Healthy.html'
+    elif pred == 5:
+        return "Cotton - Target spot", 'Cotton - Healthy.html'
 
 
 # Create flask instance
