@@ -107,13 +107,13 @@ def pred_cotton_disease(cotton_plant):
     pred = np.argmax(result, axis=1)
     print(pred)
     if pred == 0:
-        return "bacterial_blight", 'Cotton - Bacterial_blight.html'
+        return "Cotton - Bacterial_blight", 'Cotton - Bacterial_blight.html'
     elif pred == 1:
-        return "curl_virus", 'Cotton - Leaf_Curl_Virus.html'
+        return "Cotton - Leaf_Curl_Virus", 'Cotton - Leaf_Curl_Virus.html'
     elif pred == 2:
-        return "fussarium_wilt", 'Cotton - Fussarium_wilt.html'
+        return "Cotton - Fussarium_wilt", 'Cotton - Fussarium_wilt.html'
     elif pred == 3:
-        return "healthy", 'Cotton - Healthy.html'
+        return "Cotton - Healthy", 'Cotton - Healthy.html'
 
 
 # Create flask instance
@@ -124,6 +124,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
+    return render_template('Homepage.html')
+
+
+@app.route("/home1")
+def home1():
     return render_template('Homepage.html')
 
 

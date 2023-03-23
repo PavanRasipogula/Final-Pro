@@ -44,7 +44,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{ url_for('home1') }}">
           <img
             src="https://user-images.githubusercontent.com/30645315/68544440-37ffdd80-03e9-11ea-8acd-3f3f9b6fc8b3.png"
             alt=""
@@ -68,10 +68,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="">This Page For Tomato</a>
+              <a class="nav-link" href="{{ url_for('tomato') }}">This Page For Tomato</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">Home</a>
+              <a class="nav-link" href="{{ url_for('home1') }}">Home</a>
             </li>
           </ul>
         </div>
