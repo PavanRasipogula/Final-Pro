@@ -11,7 +11,6 @@
     />
     <link rel="stylesheet" href="../static/css/nav.css" />
     <link rel="icon" type="image/x-icon" href="../static/Logos/Logo.png" />
-
     <style>
       body {
         background-color: #f5f5f5;
@@ -70,7 +69,9 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('cotton') }}">This Page For Cotton🌱</a>
+              <a class="nav-link" href="{{ url_for('cotton') }}"
+                >This Page For Cotton🌱</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ url_for('home1') }}">Home</a>
@@ -95,7 +96,7 @@
         <div class="col-md-4 p-1">
           <span class="border border-primary">
             <img
-              src="{{url_for('static',filename = 'images/b817817e-a6b1-4123-88e7-db98b453ce17___RS_Early.B 6880.JPG' )}}"
+              src="{{url_for('static',filename = 'images/Cotton - Army worm.jpg' )}}"
               alt=""
               class="img-fluid"
               width="300"
@@ -116,58 +117,63 @@
           </h1>
           <h2>Disease</h2>
           <p class="custom-paragraph">
-            Cotton Fusarium wilt, also known as Fusarium wilt of cotton, is a
-            fungal disease that affects cotton plants. The disease is caused by
-            the soil-borne fungus Fusarium oxysporum f. sp. vasinfectum. It is
-            one of the most destructive diseases of cotton, causing significant
-            economic losses worldwide.
+            Cotton armyworm is not a disease, but rather an insect pest that can
+            cause significant damage to cotton plants. The cotton armyworm, also
+            known as the beet armyworm, is the larval stage of a moth species
+            called Spodoptera exigua. The adult moth lays eggs on the leaves of
+            cotton plants, and the resulting larvae feed on the leaves and buds
+            of the plant.
           </p>
           <h6>Some Prevention Strategies:</h6>
           <ul class="custom-list">
-            <li>Use of resistant cultivars</li>
-            <li>Crop rotation</li>
-            <li>Soil fumigation</li>
-            <li>Seed treatment</li>
-            <li>Sanitation</li>
-            <li>Soil management</li>
+            <li>Plant resistant varieties</li>
+            <li>Monitor regularly</li>
+            <li>Practice crop rotation</li>
+            <li>Use biological control</li>
+            <li>Maintain soil health</li>
           </ul>
-          <p class="bold">
-            preventing Fusarium wilt in cotton plants involves implementing
-            various strategies that reduce the fungus's presence, support plant
-            health, and minimize stress.
-          </p>
+          <p class="bold">-</p>
           <div class="row">
             <div class="col-md-12 p-2">
               <h2>Treatment:</h2>
               <ul class="custom-paragraph">
                 <li>
-                  Crop rotation: Avoid planting cotton in the same field for at
-                  least three years, as this can reduce the pathogen's survival
-                  rate in the soil.
+                  Identify the pest: Proper identification of the pest is
+                  crucial before choosing a treatment method. Consult with a
+                  local agricultural extension office or a licensed pest control
+                  professional for assistance with identification.
                 </li>
                 <li>
-                  Use resistant varieties: Plant resistant varieties of cotton
-                  that are less susceptible to the disease.
+                  Monitor the fields: Regular monitoring of the cotton fields
+                  can help detect the presence of armyworms and assess the
+                  severity of the infestation. Scouting should be done at least
+                  once a week.
                 </li>
                 <li>
-                  Soil fumigation: Fumigation with chemicals such as methyl
-                  bromide or chloropicrin can be used to kill the pathogen in
-                  the soil.
+                  Consider cultural control methods: Practices such as crop
+                  rotation, plowing under crop residue, and removing weeds that
+                  can serve as hosts for the armyworm can help reduce the
+                  population of the pest.
                 </li>
                 <li>
-                  Use of fungicides: Fungicides can be used to control the
-                  spread of the disease. However, they are most effective when
-                  applied preventatively, before symptoms appear.
+                  Implement biological control methods: Natural enemies of the
+                  armyworm, such as predators and parasitoids, can be introduced
+                  into the field to help control the pest.
                 </li>
                 <li>
-                  Seed treatment: Treating cotton seeds with fungicides before
-                  planting can help prevent infection.
+                  Use chemical control measures as a last resort: In severe
+                  cases, chemical control methods such as insecticides can be
+                  used to kill the armyworm. However, these chemicals should be
+                  used judiciously and in accordance with local regulations to
+                  minimize their impact on non-target organisms.
                 </li>
                 <li>
-                  Good agricultural practices: Implementing good agricultural
-                  practices, such as proper irrigation and fertilization, can
-                  help maintain plant health and reduce stress on the cotton
-                  plants, making them less susceptible to disease.
+                  Implement integrated pest management (IPM) strategies: An IPM
+                  approach involves using a combination of control methods, such
+                  as cultural and biological control, to manage pests while
+                  minimizing the use of chemicals. An IPM program can help
+                  prevent the development of resistance and reduce the
+                  likelihood of future infestations.
                 </li>
               </ul>
             </div>
@@ -177,28 +183,32 @@
                 <div class="col-md-6">
                   <div class="card">
                     <img
-                      src="{{url_for('static',filename = 'Disease/Fussarium_wilt_Cotton.png' )}}"
+                      src="{{url_for('static',filename = 'Disease/Cotton - Army worm_Cure.jpg' )}}"
                       alt=""
                       class="card-img-top"
                       width="200"
                       height="250"
                     />
                     <div class="card-body">
-                      <h5 class="card-title">Wilt Special</h5>
+                      <h5 class="card-title">
+                        Komugi (Pyriproxyfen 10% EC) Insecticide
+                      </h5>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="card">
                     <img
-                      src="{{url_for('static',filename = 'Disease/Fussarium_wilt_Cotton1.png' )}}"
+                      src="{{url_for('static',filename = 'Disease/Cotton - Army worm_Cure1.webp' )}}"
                       alt=""
                       class="card-img-top"
                       width="200"
                       height="250"
                     />
                     <div class="card-body">
-                      <h5 class="card-title">EnViro Broad Spectrum Viricide</h5>
+                      <h5 class="card-title">
+                        Fall Army Worm - Pheromone Lure
+                      </h5>
                     </div>
                   </div>
                 </div>
