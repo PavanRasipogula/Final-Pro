@@ -1,13 +1,13 @@
-.upload-heading {
+.heading-1 {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 80px;
 }
-.upload-heading h2 {
+.heading-1 h2 {
   font-size: 28px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
