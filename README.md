@@ -1,4 +1,4 @@
-# 🌱 Plant Disease Detection  
+# 🌱 Plant Leaf Disease Detection  
 
 A deep learning–based project for **plant disease classification** using image recognition. The system leverages **Convolutional Neural Networks (CNNs)** trained on a dataset of healthy and diseased plant leaves to accurately detect plant diseases.  
 
@@ -151,3 +151,4 @@ This project is licensed under the MIT License
 ---
 
 Do you also want me to **generate a `requirements.txt` file** with the main dependencies, so that users can set up the project more easily?
+
